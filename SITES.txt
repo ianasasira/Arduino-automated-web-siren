@@ -1,0 +1,6 @@
+https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-real-time-clock-module-ds3231-bc90fe
+https://create.arduino.cc/projecthub/adel4ashraf/school-alarm-automation-ca6b76       
+https://surtrtech.com/2018/01/27/how-to-simply-use-ds1302-rtc-module-with-arduino-board-and-lcd-screen/   CONNECTING AND UPDATING RTC 
+https://surtrtech.com/2018/01/27/how-to-simply-use-ds1302-rtc-module-with-arduino-board-and-lcd-screen/
+https://www.javatpoint.com/arduino-simulator
+https://startingelectronics.org/tutorials/arduino/ethernet-shield-web-server-tutorial/basic-web-server/

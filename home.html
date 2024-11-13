@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- Designined by ASASIRA IAN | ianasasira7@gmail.com -->
+<html lang="en" dir="ltr">
+  <head>
+		 <link rel="shortcut icon" href="logo.jpg" />
+    <meta charset="UTF-8">
+
+		<title>Admin Page</title>
+
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+		<!-- FONTS -->
+			<link rel ="stylesheet"	href="css/bootstrap.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+
+	 <?php
+
+ $file = "log.txt";
+ $ip = $_SERVER['REMOTE_ADDR'];
+ $date = date("d-m-y");
+ $time = date("H:i:s");
+ $browser = $_SERVER['HTTP_USER_AGENT'];
+ $data = "IP: ".$ip.", Date: ".$date.", Time:".$time.", Browser: ".$browser;
+
+ $f=fopen($file, 'a');
+ fwrite($f,$data."\r\r\n");
+ fclose($f);
+ ?>
+
+
+	<body class="loggedin">
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus'></i>
+      <span class="logo_name">Ngo Siren</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-list-ul' ></i>
+            <span class="links_name">Management</span>
+          </a>
+        </li>
+     
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <span class="links_name">Log out</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+     <!-- <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <i class='bx bx-search' ></i>
+      </div>-->
+      <div class="profile-details">
+        <!--<img src="images/profile.jpg" alt="">-->
+        <span class="admin_name"><p>Welcome back, <?php echo $_SESSION['user_id'];?></span>
+        <i class='bx bx-chevron-down' ></i>
+      </div>
+    </nav>
+
+    <div class="home-content">
+      <form action="get"></form>
+      <div class="overview-boxes">
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Weil siren now</div>
+            <button type="submit" name="button1" class="btn" id="" type="primary">Weil</button>
+            
+            <div class="indicator">
+                <i class='bx bx-up-arrow-alt'></i>
+              <span class="text">Up from Date time now.</span>
+            </div>
+          </div>
+          <i class='bx bx-cart-alt cart'></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Set public holiday</div>
+            <button type="submit" name="button" class="btn" id="" type="primary">Set</button>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <span class="text">Up from Date time now.</span>
+            </div>
+          </div>
+          <i class='bx bxs-cart-add cart two' ></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Set New Schedule </div>
+            <div class="number"></div>
+            <div class="indicator">
+              <i class='bx bx-up-arrow-alt'></i>
+              <span class="text">currently unavailable</span>
+            </div>
+          </div>
+          <i class='bx bx-cart cart three' ></i>
+        </div>
+        <div class="box">
+          <div class="right-side">
+            <div class="box-topic">Turn Off siren</div>
+            <button type="submit" name="button" class="btn" id="" type="primary">Turn Off</button>
+            <div class="indicator">
+              <i class='bx bx-down-arrow-alt down'></i>
+              <span class="text">Down From Today</span>
+            </div>
+          </div>
+          <i class='bx bxs-cart-download cart four' ></i>
+        </div>
+      </div>
+
+      <div class="sales-boxes">
+        <div class="recent-sales box">
+          <div class="title">Time Schedule</div>
+          <br>
+          <div class="sales-details">
+            t
+            <ul class="details">
+              <li class="topic">Weekday</li>
+              <br>
+              <li><a href="#">4:30am</a></li>
+              <li><a href="#">5:00am</a></li>
+              <li><a href="#">6:30am</a></li>
+              <li><a href="#">7:00am</a></li>
+              <li><a href="#">7:15am</a></li>
+              <li><a href="#">8:00am</a></li>
+              <li><a href="#">9:20am</a></li>
+              <li><a href="#">10:40pm</a></li>
+              <li><a href="#">11:00am</a></li>
+              <li><a href="#">1:00pm</a></li>
+              <li><a href="#">2:00pm</a></li>
+              <li><a href="#">2:40pm</a></li>
+              <li><a href="#">3:20pm</a></li>
+              <li><a href="#">4:40pm</a></li>
+              <li><a href="#">6:30pm</a></li>
+              <li><a href="#">7:00pp</a></li>
+              <li><a href="#">7:15pm</a></li>
+              <li><a href="#">9:30pm</a></li>
+            </ul>
+            <ul class="details">
+            <li class="topic">Public holiday(Sunday Program)</li>
+            <li><a href="#">6:30am</a></li>
+            <li><a href="#">8:00am</a></li>
+            <li><a href="#">10:00am</a></li>
+            <li><a href="#">1:00pm</a></li>
+            <li><a href="#">6:30pm</a></li>
+            <li><a href="#">7:00pm</a></li>
+            <li><a href="#">7:15pm</a></li>
+            <li><a href="#">9:30pm</a></li>
+          </ul>
+          </div>
+          <div class="button">
+            <a href="#">See All</a>
+          </div>
+        </div>
+        <div class="top-sales box">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
+
+</body>
+</html>
